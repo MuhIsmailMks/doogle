@@ -287,9 +287,9 @@
                         </div>
                         <div class="w-[70%] max-w-[70%] overflow-hidden h-full flex_center text-[14px] lg:text-[11px] text-[#504D4E]">
                             <p class="font-bold">CA:</p>
-                            <span class="text-ellipsis max-lg:max-w-[70%] overflow-hidden  ">AtKjNndzNBJAo4Z7o23hTMcucBwJX94y94E2Aj82YWux</span>
+                            <span class="text-ellipsis max-lg:max-w-[70%] overflow-hidden copy-box__text copy-box__btn ">AtKjNndzNBJAo4Z7o23hTMcucBwJX94y94E2Aj82YWux</span>
                         </div>
-                        <div class="w-[15%] h-full flex_center bg-[#C3431C] cursor-pointer">
+                        <div class="w-[15%] h-full flex_center bg-[#C3431C] cursor-pointer copy-box">
                             <img src="./assets/images/copy.svg" alt="" class="w-[30%] object-contain">
                         </div>
                     </div>
@@ -548,6 +548,29 @@
             menuBtn.classList.toggle('active')
             menu.classList.toggle('hidden')
         });
+
+        // copy address
+        const copyAddress = document.querySelector('.copy-box'); 
+        let text = document.querySelector('.copy-box__text');
+        let btn = document.querySelector('.copy-box__btn');
+        let btnText = btn.textContent;
+        let timeout;
+
+        copyAddress.addEventListener('click', () => { 
+            navigator.clipboard.writeText(text.textContent).then(function () {
+                btn.textContent = 'Copied';
+
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                    btn.textContent = btnText;
+                }, 2000);
+            }).catch(function (err) {
+                console.error('Failed to copy text: ', err);
+            });
+            
+        })
+
+
  
     
     
