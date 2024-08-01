@@ -138,10 +138,23 @@ body{
 
 /* hero */
 .hero{
+   
+    /* animation: zoom_in 10s infinite linear; */
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../images/hero_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: zoom_in 30s infinite linear;
+    -webkit-animation: zoom_in 30s infinite linear;
 }
 
 /* about */
@@ -260,14 +273,35 @@ footer::before,
 }
  
 .token_animation{
-    animation: l15 3s infinite cubic-bezier(0.5,300,0.5,-300);
+    transform-origin: 50% 0px;
+    animation: token_animation 3s infinite cubic-bezier(0.5,300,0.5,-300);
 }
 
-@keyframes l15 { 
-    100% {transform: rotate(0.05deg)}
-   }
+@keyframes token_animation { 
+    100% { transform: rotate(0.05deg); -webkit-transform: rotate(0.05deg); -moz-transform: rotate(0.05deg); -ms-transform: rotate(0.05deg); -o-transform: rotate(0.05deg); }
+}
 
+.zoom_in{
+    animation: zoom_in 10s infinite linear;
+    -webkit-animation: zoom_in 10s infinite linear;
+}
 
+@keyframes zoom_in {
+    0%,100%{
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+    50%{
+      transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -o-transform: scale(1.5);
+  }
+  }
 
 /* media queries */
 @media screen and (min-width:1025px){
