@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/hero_image.png">
+    
+    <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>DOOGLE</title>
+</head>
+
+<body>
+
+    <div class="container_site max-w-[100%] relative w-full h-auto min-h-[100vh] overflow-hidden">
+
+        <!-- navbar -->
+        <nav
+            class="w-full z-[999]  justify-center h-[100px] xl:h-[120px] relative left-0 top-0 max-w-[100%] bg-[#05A3D4] flex items-center px-[2rem] xl:px-[5rem] ">
+
+            <div class="nav_container px-[1rem] md:px-[2rem] bg-[#33E4FF] flex items-center relative h-[70%] justify-between w-full max-w-[100%] xl:max-w-[1500px] border-black border-[2px] nav_shadow rounded-lg md:rounded-[30px] max-lg:px-6">
+
+                <div class="left flex relative z-10 justify-center items-center   text_nav text-[15px] md:text-[30px]" data-aos="fade-right"
+                data-aos-duration="800"
+                data-aos-delay="200">
+
+                    <div class="logo  flex_center gap-2 md:gap-4">
+                        <span class="w-[40px] md:w-[60px] h-[40px] md:h-[60px] rounded-full border-black border-[2px] flex_center overflow-hidden">
+                            <img src="./assets/images/logo.png" alt="" class="w-[130px] h-auto object-cover">
+                        </span>
+                        <h2 >Doogle</h2>
+                    </div>  
+                   
+                </div>
+
+                <div class="center absolute left-[0%] translate-x-[-50%]  top-0 h-full w-[100%] z-0  justify-center flex items-center "
+                 data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="300">
+
+                    <ul class="flex items-center absolute opacity-0 xl:opacity-100 xl:relative gap-[1rem] link_none">
+                        
+                        <li class="list-none">
+                            <a href="#About"
+                                class="text_nav text-[18px]">
+                                About</a>
+                        </li>
+                      
+                        <li class="list-none">
+                            <a href="#Howtobuy"
+                                class="text_nav text-[18px]">
+                                How to buy</a>
+                        </li>
+
+                        <li class="list-none">
+                            <a href="#tokenomics"
+                                class="text_nav text-[18px]">
+                                Tokenomics</a>
+                        </li>
+
+                        <li class="list-none">
+                            <a href="#faq"
+                                class="text_nav text-[18px]">
+                                Faq</a>
+                        </li>
+
+                    
+
+                    </ul>
+
+                </div>
+
+                <div class="right relative z-10 md:w-auto flex justify-center h-full items-center gap-[1rem] " data-aos="fade-left"
+                data-aos-duration="800"
+                data-aos-delay="200">
+
+                    <a href="#telegram"
+                        class="h-[50px] w-[50px]  bg-[#fff] rounded-[10px] md:rounded-[10px] text-[10px] xl:text-[18px] justify-center items-center btn_hover border-[#000] border-[1px] hover:scale-110 duration-300 box_shdow hidden lg:flex">
+                        <img src="./assets/images/telegram.svg" alt="" class="w-[50%] h-auto object-contain">
+                    </a>
+                  
+                    <a href="#twitter"
+                        class="h-[50px] w-[50px]  bg-[#FFD9EE] rounded-[10px] md:rounded-[10px] text-[10px] xl:text-[18px] justify-center items-center btn_hover border-[#000] border-[1px] hover:scale-110 duration-300 box_shdow hidden lg:flex">
+                        <img src="./assets/images/twitter.svg" alt="" class="w-[50%] h-auto object-contain">
+                    </a>
+
+                    <a href="#"
+                        class="w-[70px] h-[33px] md:w-[145px] uppercase md:h-[53px]   bg-[#FFD93C] rounded-[10px] md:rounded-[10px] text-[10px] xl:text-[18px] flex justify-center items-center btn_hover border-[#000] border-[1px] hover:scale-110 duration-300 box_shdow">
+                        buy
+                    </a>
+
+                    <div class="menu-button relative">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+
+                  
+                </div>
+
+            </div>
+
+            <!-- menu -->
+            <div class="menu menu_drop nav_shadow absolute hidden top-[110%] right-[3rem] w-[190px] flex justify-center border-black border-[2px] rounded-[12px] bg-[#33E4FF] h-auto py-4">
+            
+                <ul class="flex items-center  relative gap-[2rem] link_none flex-col justify-center">
+
+                    <li class="list-none"><a href="#about"
+                            class="text_nav text-[19px] md:text-[30px]">About</a>
+                    </li>
+                    <li class="list-none"><a href="#Howtobuy"
+                            class="text_nav text-[19px] md:text-[30px]">How to buy</a>
+                    </li>
+                    <li class="list-none"><a href="#tokenomics"
+                            class="text_nav text-[19px] md:text-[30px]">Tokenomics</a>
+                    </li>
+                    <li class="list-none"><a href="#faq"
+                            class="text_nav text-[19px] md:text-[30px]">Faq</a>
+                    </li>
+                    <li class="flex justify-center w-full gap-4">
+                        <a href="#telegram"
+                        class="h-[50px] w-[50px]  bg-[#fff] rounded-[10px] md:rounded-[10px] text-[10px] xl:text-[18px] justify-center items-center btn_hover border-[#000] border-[1px] hover:scale-110 duration-300 box_shdow flex">
+                        <img src="./assets/images/telegram.svg" alt="" class="w-[50%] h-auto object-contain">
+                    </a>
+                  
+                    <a href="#twitter"
+                        class="h-[50px] w-[50px]  bg-[#FFD9EE] rounded-[10px] md:rounded-[10px] text-[10px] xl:text-[18px] justify-center items-center btn_hover border-[#000] border-[1px] hover:scale-110 duration-300 box_shdow flex">
+                        <img src="./assets/images/twitter.svg" alt="" class="w-[50%] h-auto object-contain">
+                    </a>
+                    </li>
+                   
+                            
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- hero -->
+        <section class="hero w-full relative flex_center h-auto xl:h-[500px] min-[1600px]:h-[760px] min-[2000px]:h-[50vw] max-lg:flex-col max-lg:py-[20vw]">
+
+            <div class="w-full lg:w-[50%] relative flex justify-center lg:justify-end">
+                <div class="w-auto flex_center flex-col">
+                    <div class="relative rotate-[-10deg]">
+                        <h1 class="text-[#FFD93C] hero_text_shdow text-[9vw] lg:text-[40px] xl:text-[60px] min-[1600px]:text-[99.75px]">MATT FURIE’s DOG</h1>
+                    </div>
+                    <div class="w-[90vw] lg:w-[300px] xl:w-[500px] min-[1600px]:w-[700px] h-auto">
+                        <img src="./assets/images/hero_text.png" alt="" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-[40%] lg:h-full relative flex justify-center lg:justify-start items-center">
+                <div class="w-[70%]  ">
+                    <img src="./assets/images/hero_img.png" alt="hero matt" class="w-full h-auto object-contain">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- about -->
+         <section class="about relative w-full flex_center bg-[#00DCFC] h-auto lg:h-[600px] min-[1600px]:h-[800px] mt-[5vw] ">
+            
+            <!-- lines -->
+             <div class="w-full h-auto absolute top-[-40vw] flex_center">
+                <img src="./assets/images/line_about.svg" alt="" class="w-auto h-[62vw] min-w-[100%] object-cover rotate-[16deg] ">
+             </div>
+
+             <!-- content -->
+              <div class="w-full  flex_center relative h-auto lg:h-full max-lg:flex-col max-lg:gap-[4rem] max-lg:py-[3rem]">
+
+                <div class="w-full lg:w-[50%] flex_center h-full">
+                    
+                     <div class="img_about flex max-lg:justify-center rotate-[-14deg]">
+
+                        <img src="./assets/images/about_img.png" alt="" class="w-[340px] max-w-[90%] lg:w-[500px] min-[1600px]:w-[650px] h-auto object-contain mt-[-30px]">
+
+                        <div class="social absolute bg-[#DEEE47] w-[78%] xl:w-[280px] h-[80px] bottom-[14px] lg:bottom-[23px] right-[48px] lg:right-[88px] xl:right-[97px] min-[1600px]:right-[127px] min-[1600px]:bottom-[29px] rounded-tl-[10px] rounded-br-[14px] flex_center gap-4">
+
+                            <a href="#telegram" class="relative duration-300 hover:scale-105">
+                                <img src="./assets/images/telegram_about.png" alt="" class="w-[37px] lg:w-[55px] h-auto object-contain">
+                            </a>
+                            <a href="#twitter" class="relative duration-300 hover:scale-105">
+                                <img src="./assets/images/twitter_about.png" alt="" class="w-[37px] lg:w-[55px] h-auto object-contain">
+                            </a>
+                            <a href="#dex" class="relative duration-300 hover:scale-105">
+                                <img src="./assets/images/dex_about.png" alt="" class="w-[37px] lg:w-[55px] h-auto object-contain">
+                            </a>
+                            <a href="#sol" class="relative duration-300 hover:scale-105">
+                                <img src="./assets/images/sols_about.svg" alt="" class="w-[37px] lg:w-[55px] h-auto object-contain">
+                            </a>
+
+                        </div>
+
+                     </div> 
+
+                </div>
+
+
+                <div class="w-[90%] lg:w-[50%] flex max-lg:items-center flex-col">
+
+                    <h1 class="about_text rotate-[4deg] about_text_shdow text-[#FFD93C] leading-[1] text-[14vw] lg:text-[100px] min-[1600px]:text-[130px]">About <br>
+                        $DOOGLE
+                    </h1>
+
+                    <p class="xl:w-[600px] my-[2rem] lg:text-[19px] min-[1600px]:text-[24px]">
+                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available
+                    </p>
+
+                    <div class="relative rotate-[-6deg] ">
+                        <a href="#"
+                        class="w-[140px] h-[53px] md:w-[230px] uppercase md:h-[73px]   bg-[#FFD93C] rounded-[10px] md:rounded-[10px] text-[14px] xl:text-[18px] flex justify-center items-center btn_hover border-[#000] border-[1px] hover:scale-110 duration-300 box_shdow gap-6 ">
+
+                        <span class="w-[40px] md:w-[40px] h-[40px] md:h-[40px] rounded-full border-black border-[2px] flex_center overflow-hidden">
+                            <img src="./assets/images/logo.png" alt="" class="w-[130px] h-auto object-cover">
+                        </span>
+                        buy now
+                    </a>
+                    </div>
+                </div>
+
+              </div>
+
+         </section>
+
+         <section id="tokenomics" class="token hidden w-full h-auto relative flex items-center">
+
+            <!-- background -->
+            <div class="bg-image imagehome w-full h-full absolute left-[50%] translate-x-[-50%] top-0 flex justify-center items-center z-[0] max-w-[1900px]"> 
+                 
+
+                <!-- rotate image -->
+                <div class="absolute w-[100vw] md:w-[1000px] h-[100vw] md:h-[1000px] object-contain z-10 top-[50%] xl:top-0 xl:right-[-10%] min-[2000px]:right-[-5%]" data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="1000">
+                    <img src="./assets/images/rotate_img.svg" alt="" class="absolute  w-full h-full rotate_animation">
+                </div>
+    
+            </div>
+
+            <div  class="content pt-[100px] xl:pt-[0px] relative h-auto xl:h-[1000px] w-full max-w-[1800px] xl:px-[2rem] mx-auto flex justify-between   flex-col xl:flex-row text-white  ">
+
+               <div class="w-[50%]"></div>
+
+                <!-- image hero -->
+                <div class="right relative xl:absolute bottom-0 right-0 w-full max-[1000px]:mt-[2rem] xl:w-[763px] flex justify-center float_animation">
+                    <img src="./assets/images/hero-img.png" alt="popo" class="max-w-[100%] w-[60%] md:w-[600px] bottom-[-20px] xl:bottom-[-40px] relative xl:absolute h-auto object-cover" data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="600">
+                </div>
+
+            </div> 
+
+        </section>
+
+    </div>
+
+    <!-- aos js scroll animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+
+        // aos 
+        AOS.init({ 
+           once: true
+        });   
+
+        // menu navbar
+        const menu = document.querySelector('.menu');
+        const menuBtn = document.querySelector('.menu-button');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active')
+            menu.classList.toggle('hidden')
+        });
+ 
+    
+    
+    </script>
+</body>
+
+</html>

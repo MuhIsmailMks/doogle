@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+:root{ 
+    --font-mont:  "Montserrat", sans-serif;
+    --font-rock:  "RocknRoll One", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.montserrat_font{
+    font-family: var(--font-mont);
+}
+
+.rock_font{
+    font-family: var(--font-rock);
+}
+
+body{  
+    font-family: "Jua", sans-serif;
+}
+   
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_text_shdow{
+    text-shadow: 2.2px 2.2px 0px #000000;
+    -webkit-text-stroke: 2px black;
+}
+
+.box_shdow{
+    box-shadow: -2px 2px 0px 0px #000000;
+}
+
+.nav_shadow{
+    box-shadow: -2px 2px 0px 0px #000000;
+}
+
+.nav_container::before,
+.nav_container::after{
+    content: "";
+    position: absolute; 
+
+    height: 50px;
+    width: 50px;  
+
+
+    background-image: url('../images/clip_nav.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+
+
+.nav_container::before{
+    left: -30px;
+}
+ 
+.nav_container::after{
+    right: -30px;
+}
+
+.text_nav{
+    transition: .2s ease-out;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+}
+ 
+.text_nav:hover{
+    color: #ffffff;
+}
+
+/* menu button */
+.menu-button {
+    display: none;
+    overflow: hidden;
+
+    height: 35px;
+    width: 45px;
+
+    position: relative; 
+
+    align-items: center;
+}
+
+.menu-button span {
+        width: 100%;
+        height: 3px;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        transition: all .3s ease-in-out;
+    }
+
+    .menu-button span:nth-child(1) {
+        top: 0;
+    }
+
+    .menu-button span:nth-child(2) {
+        position: relative;
+    }
+
+    .menu-button span:nth-child(3) {
+        bottom: 0;
+    }
+
+    .menu-button.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 1rem;
+    }
+
+    .menu-button.active span:nth-child(2) {
+        width: 0%;
+    }
+
+    .menu-button.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 1rem;
+    }
+
+/* hero */
+
+.hero{
+    background-image: url('../images/hero_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* about */
+.about::before{
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-image: url('../images/about_texture.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.about_text_shdow{
+    text-shadow: .35vw .35vw 0px #000000;
+    -webkit-text-stroke: .2vw black;
+}
+
+
+
+
+
+
+
+
+
+/* animation */
+.float_animation{
+    animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% { 
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.cloud_animation{
+    animation: cloud 35s ease-in-out infinite; 
+}
+
+.cloud_animation_reverse{
+    animation: cloud_reverse 35s ease-in-out infinite;
+}
+
+@keyframes cloud {
+	0%,100% {
+		transform: translateX(0px);
+	}
+	50% { 
+		transform: translateX(-100px);
+	} 
+}
+
+@keyframes cloud_reverse {
+	0%,100% {
+		transform: translateX(0px);
+	}
+	50% { 
+		transform: translateX(100px);
+	} 
+}
+ 
+/* media queries */
+@media screen and (min-width:1025px){
+    .menu_drop{
+        display: none;
+        opacity: 0;
+        z-index: -111;
+        right: -200%;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .menu-button{
+        display: flex;
+        position: absolute;
+        right: 0; 
+    }
+
+}
+
+ 
+
+@media screen and (max-width:500px) { 
+    .menu-button {
+        width: 27px;
+        height: 23px;
+    }
+
+    .menu-button.active span:nth-child(1){
+           top: .6rem; 
+    }
+
+    .menu-button.active span:nth-child(3){
+                bottom: .7rem;
+    }
+    
+    .marquee span{ 
+        font-size: 34px; 
+    } 
+
+    .cloud_animation{
+        animation: cloud 49s ease-in-out infinite; 
+    }
+    
+    .cloud_animation_reverse{
+        animation: cloud_reverse 49s ease-in-out infinite;
+    }
+} 
+
+
