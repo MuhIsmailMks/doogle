@@ -148,7 +148,7 @@
         </nav>
 
         <!-- hero -->
-        <section class="hero w-full relative flex_center h-auto xl:h-[500px] min-[1600px]:h-[760px] min-[2000px]:h-[50vw] max-lg:flex-col max-lg:py-[20vw]">
+        <section class="hero hidden w-full relative flex_center h-auto xl:h-[500px] min-[1600px]:h-[760px] min-[2000px]:h-[50vw] max-lg:flex-col max-lg:py-[20vw]">
 
             <div class="w-full lg:w-[50%] relative flex justify-center lg:justify-end">
                 <div class="w-auto flex_center flex-col">
@@ -170,7 +170,7 @@
         </section>
 
         <!-- about -->
-         <section class="about relative w-full flex_center bg-[#00DCFC] h-auto lg:h-[600px] min-[1600px]:h-[800px] mt-[5vw] ">
+         <section class="about  relative w-full flex_center bg-[#00DCFC] h-auto lg:h-[600px] min-[1600px]:h-[800px] mt-[5vw] ">
             
             <!-- lines -->
              <div class="w-full h-auto absolute top-[-40vw] flex_center">
@@ -234,33 +234,257 @@
 
          </section>
 
-         <section id="tokenomics" class="token hidden w-full h-auto relative flex items-center">
+         <section id="tokenomics" class="token bg-[#FFD93C] w-full h-auto relative flex items-center lg:h-[700px] z-10">
+
+              <!-- lines -->
+              <div class="w-full h-auto absolute top-[-1.5vw] flex_center">
+                <img src="./assets/images/lines_token.svg" alt="" class="w-auto h-[6vw] min-w-[100%] object-cover  ">
+             </div>
 
             <!-- background -->
             <div class="bg-image imagehome w-full h-full absolute left-[50%] translate-x-[-50%] top-0 flex justify-center items-center z-[0] max-w-[1900px]"> 
                  
 
                 <!-- rotate image -->
-                <div class="absolute w-[100vw] md:w-[1000px] h-[100vw] md:h-[1000px] object-contain z-10 top-[50%] xl:top-0 xl:right-[-10%] min-[2000px]:right-[-5%]" data-aos="zoom-in"
-                data-aos-duration="1000"
-                data-aos-delay="1000">
+                <div class="absolute w-[100vw] md:w-[1000px] h-[100vw] md:h-[1000px] object-contain z-10 top-[50%] xl:top-0 xl:right-[-10%] min-[2000px]:right-[-5%]"  >
                     <img src="./assets/images/rotate_img.svg" alt="" class="absolute  w-full h-full rotate_animation">
                 </div>
     
             </div>
 
-            <div  class="content pt-[100px] xl:pt-[0px] relative h-auto xl:h-[1000px] w-full max-w-[1800px] xl:px-[2rem] mx-auto flex justify-between   flex-col xl:flex-row text-white  ">
+            <!-- content -->
+            <div  class="content pt-[100px] xl:pt-[0px] relative h-auto xl:h-full w-full max-w-[1800px] xl:px-[2rem] mx-auto flex justify-center lg:justify-between  items-center flex-col xl:flex-row text-white  max-lg:pb-[100px]">
 
-               <div class="w-[50%]"></div>
+               <div class="w-full lg:w-[50%] flex_center flex-col">
+            
+                <div class="w-full  lg:w-[500px]  lg:mr-[-70px] ">
+                        <img src="./assets/images/token_title.png" alt="" class="w-full h-auto object-contain max-lg:rotate-[-7deg]">
+                   </div>
 
-                <!-- image hero -->
-                <div class="right relative xl:absolute bottom-0 right-0 w-full max-[1000px]:mt-[2rem] xl:w-[763px] flex justify-center float_animation">
-                    <img src="./assets/images/hero-img.png" alt="popo" class="max-w-[100%] w-[60%] md:w-[600px] bottom-[-20px] xl:bottom-[-40px] relative xl:absolute h-auto object-cover" data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="600">
+                    <div class="w-[80%]  lg:w-[500px] z-10">
+                    <img src="./assets/images/token_content.png" alt="" class="w-full h-auto object-contain ml-[-20px] lg:ml-[-5px] mt-[-80px] lg:mt-[-87px]">
+                   </div>
+
+               </div>
+
+                <!-- image  -->
+                <div class="right relative xl:absolute bottom-0 right-0 w-full max-[1000px]:mt-[2rem] xl:w-[863px] flex justify-center mirror_image ">
+
+                    <span class="absolute w-full bottom-0 h-[50%] token_image left-0 z-10"></span>
+                    
+                    <img src="./assets/images/token_img.png" alt="matt" class="max-w-[100%] w-[90%] md:w-[400px] xl:w-[600px]    relative  h-auto object-cover "  >
+
                 </div>
 
+                <!-- buy ca -->
+                 <div class=" w-[90%] md:w-[550px] absolute bottom-0   lg:right-[10%] h-[220px] bg-[#FFD93C] border-black border-[2px] rounded-t-xl flex_center flex-col px-[1.5rem] gap-4">
+                    
+                    <!-- contract -->
+                    <div class="bg-white w-full flex_center h-[70px] buy rounded-xl overflow-hidden relative">
+                        <div class="w-[15%] h-full flex_center bg-[#FECA08]">
+                            <h3 class="text-[19px] text-black">BUY</h3>
+                        </div>
+                        <div class="w-[70%] max-w-[70%] overflow-hidden h-full flex_center text-[11px] text-[#504D4E]">
+                            <p class="font-bold">CA:</p>
+                            <span class="text-ellipsis max-lg:text-[1.9vw]">AtKjNndzNBJAo4Z7o23hTMcucBwJX94y94E2Aj82YWux</span>
+                        </div>
+                        <div class="w-[15%] h-full flex_center bg-[#C3431C] cursor-pointer">
+                            <img src="./assets/images/copy.svg" alt="" class="w-[30%] object-contain">
+                        </div>
+                    </div>
+
+                    <!-- other -->
+                    <div class=" relative w-full flex_center h-auto text-[#000000] text-center gap-3">
+                        <div class="px-4 py-2 bg-white rounded-lg buy border-black border-[1px] leading-[1]">
+                            <span>0%  <br>
+                                TEAMs TOKEN</span>
+                        </div>
+                        <div class="px-4 py-4 bg-white rounded-lg buy border-black border-[1px] leading-[1]">
+                            <span>
+                                Name: $DOOGLE <br>
+                                Ticker: DOOGLE
+                            </span>
+                        </div>
+                        <div class="px-6 py-4 bg-white rounded-lg buy border-black border-[1px] leading-[1]">
+                            <span>0% TAX</span>
+                        </div>
+                    </div>
+
+                 </div>
+
             </div> 
+
+        </section>
+
+        <section id="roadmap" class="roadmap bg-[#F8EABA] flex flex-col items-center w-full relative h-auto pt-[50px] z-20">
+
+            
+              <!-- lines -->
+              <div class="w-full h-auto absolute top-[-1.5vw] flex_center">
+                <img src="./assets/images/line_roadmap.svg" alt="" class="w-auto h-[3vw] min-w-[100%] object-cover max-h-[100px] ">
+             </div>
+
+             <!-- title -->
+            
+            <h2 class="text-[#FFD93C] roadmap_text_shdow text-center text-[80px] min-[1600px]:text-[120px]">RoadMap</h2>
+
+           <div class="phase_container mt-8 w-full flex_center gap-14 lg:gap-8 flex-wrap">
+
+            <!-- phase 1 -->
+                <div class="phase flex_center max-w-[95%] w-[350px] h-auto rounded-lg py-[1rem] relative">
+                 
+                    <!-- clip -->
+                    <img src="./assets/images/clip_phase.svg" alt="" class="absolute left-4 top-[-20px] w-[20px] h-auto object-contain">
+                    <!-- img -->
+                    <img src="./assets/images/phase1img.png" alt="" class="absolute right-4 top-[-50px] w-[100px] h-auto object-contain rounded-full border-black border-[1px]">
+                    
+                    <!-- content -->
+                <div class="w-[70%]">
+                    
+                    <h1 class="text-[40px] phase_text_shdow ">Phase 1</h1>
+
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Idea</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Development</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Audit & KYC</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">PR & Marketing</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Presale on Pinksale</p>
+                    </div> 
+
+                </div>
+              </div>
+
+            <!-- phase 2 -->
+                <div class="phase flex_center max-w-[95%] w-[350px] h-auto rounded-lg py-[1rem] relative">
+                 
+                    <!-- clip -->
+                    <img src="./assets/images/clip_phase.svg" alt="" class="absolute left-4 top-[-20px] w-[20px] h-auto object-contain">
+                    <!-- img -->
+                    <img src="./assets/images/phase2img.png" alt="" class="absolute right-4 top-[-50px] w-[100px] h-auto object-contain rounded-full border-black border-[1px]">
+                    
+                    <!-- content -->
+                <div class="w-[70%]">
+                    
+                    <h1 class="text-[40px] phase_text_shdow ">Phase 2</h1>
+
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Idea</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Development</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Audit & KYC</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">PR & Marketing</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Presale on Pinksale</p>
+                    </div> 
+
+                </div>
+              </div>
+
+            <!-- phase 3 -->
+                <div class="phase flex_center max-w-[95%] w-[350px] h-auto rounded-lg py-[1rem] relative">
+                 
+                    <!-- clip -->
+                    <img src="./assets/images/clip_phase.svg" alt="" class="absolute left-4 top-[-20px] w-[20px] h-auto object-contain">
+                    <!-- img -->
+                    <img src="./assets/images/phase3img.png" alt="" class="absolute right-4 top-[-50px] w-[100px] h-auto object-contain rounded-full border-black border-[1px]">
+                    
+                    <!-- content -->
+                <div class="w-[70%]">
+                    
+                    <h1 class="text-[40px] phase_text_shdow ">Phase 1</h1>
+
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Idea</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Development</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Audit & KYC</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">PR & Marketing</p>
+                    </div>
+                    <div class="flex items-center w-full text-[#00000091] mb-2">
+                        <span class="w-[10%]">
+                            <img src="./assets/images/phase_list.svg" alt="" class="w-[30px] h-[30px] ">
+                        </span>
+                        <p class="text-[20px]">Presale on Pinksale</p>
+                    </div> 
+
+                </div>
+              </div>
+
+           </div>
+
+           <!-- image -->
+            <div class="w-full flex_center mt-[5rem]">
+
+                <div class="w-[40%] h-auto flex_center">
+                    <img src="./assets/images/roadmap_img.png" alt="" class="w-full object-contain">
+                </div>
+
+                <h2 class="text-[22vw] tracking-[2vw] leading-[1] absolute bottom-0 text-black font-bold uppercase opacity-[0.05] z-20">doogle</h2>
+
+                <span class="absolute z-10 left-0 bottom-0 w-1 h-1 radius_gradient"></span>
+                <span class="absolute z-10 right-0 bottom-0 w-1 h-1 radius_gradient"></span>
+            </div>
 
         </section>
 
