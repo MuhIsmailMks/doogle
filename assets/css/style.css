@@ -146,6 +146,7 @@ body{
 
 /* about */
 #tokenomics::before,
+footer::before,
 .about::before{
     content: "";
     position: absolute;
