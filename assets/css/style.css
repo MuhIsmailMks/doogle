@@ -170,6 +170,15 @@ footer::before,
 
 
 
+/* tokenomics */ 
+/* ca */
+.buy{
+    box-shadow: 2.37px 2.37px 0px 0px #000000;
+}
+
+.token_image{
+    background: linear-gradient(356.21deg, #FFD93C -3.51%, rgba(115, 115, 115, 0) 104.26%);
+}
 
 /* roadmap */
 .roadmap::before{
@@ -250,6 +259,16 @@ footer::before,
 	} 
 }
  
+.token_animation{
+    animation: l15 3s infinite cubic-bezier(0.5,300,0.5,-300);
+}
+
+@keyframes l15 { 
+    100% {transform: rotate(0.05deg)}
+   }
+
+
+
 /* media queries */
 @media screen and (min-width:1025px){
     .menu_drop{
@@ -268,8 +287,6 @@ footer::before,
     }
 
 }
-
- 
 
 @media screen and (max-width:500px) { 
     .menu-button {
@@ -299,12 +316,3 @@ footer::before,
 } 
 
 
-
-/* ca */
-.buy{
-    box-shadow: 2.37px 2.37px 0px 0px #000000;
-}
-
-.token_image{
-    background: linear-gradient(356.21deg, #FFD93C -3.51%, rgba(115, 115, 115, 0) 104.26%);
-}
