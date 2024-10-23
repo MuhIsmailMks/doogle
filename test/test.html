@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>
+
+
+        pada kode dari react js '   // delete function
+    const deleteBtn = draggableOverlay.querySelector('.deleteBtn');
+
+    deleteBtn.addEventListener('click', () => {
+       
+      draggableOverlay.remove();
+    
+      const dataImage = draggableOverlay.getAttribute('data-image');
+    
+      // Mengecek apakah masih ada elemen lain dengan data-image yang sama di dalam canvasContainer
+      const remainingElements = document.querySelectorAll(`#canvasContainer [data-image="${dataImage}"]`);
+    
+      // Jika tidak ada elemen lain dengan data-image yang sama, hapus kelas active
+      if (remainingElements.length === 0) {
+        const addImageElement = document.querySelector(`.addImage[data-image="${dataImage}"]`);
+        if (addImageElement) {
+          addImageElement.classList.remove('active');
+        }
+      }
+    });', ini sebuah tombol untuk delete element yang ini ' {elements.map((element, index) => (
+        <div
+          key={index}
+          id={`draggableOverlay-${element.id}`} // Assign unique ID
+          className={`draggableOverlay ${element.dataClass}`}
+          data-image={element.dataImage}
+          style={{
+            position: 'absolute',
+            left: `${element.position.x}px`,
+            top: `${element.position.y}px`,
+          }}
+        >
+
+        <img src={element.imgSrc} alt="" className={`main_image ${element.dataClass}`} />
+        <div className="settingImage absolute w-full h-full left-0 top-0">
+          {/* Left section */}
+          <div className="left">
+            <div className="indexTop cursor-pointer w-[70%] relative">
+              <img src={indexTop} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="indexBottom cursor-pointer w-[70%] relative">
+              <img src={indexBottom} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="mirrorMode cursor-pointer w-[70%] relative">
+              <img src={mirrorMode} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="mirrorTopMode cursor-pointer w-[70%] relative">
+              <img src={mirrorMode} alt="" className="w-full h-auto object-contain rotate-[90deg]" />
+            </div>
+            <div className="deleteBtn cursor-pointer w-[70%] relative">
+              <img src={deleteIcon} alt="" className="w-full h-auto object-contain" />
+            </div>
+          </div>
+          {/* Right section */}
+          <div className="right-[0%] absolute h-full w-[25%]">
+            <div className="rotate rotateResizeElement rounded-lg  top-0">
+              <img src={rotateIcon} alt="" className="w-[70%] h-auto object-contain" />
+            </div>
+            <div className="resize rotateResizeElement rounded-lg  bottom-0">
+              <img src={resizeIcon} alt="" className="w-[70%] h-auto object-contain mirror_image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}'. dan ini fungsi untuk restart element '  // restart button
+    const handleRestart = () => {
+      setElements([]); 
+      
+      const addImageElements = document.querySelectorAll('.addImage');
+      
+      addImageElements.forEach((element) => {
+        element.classList.remove('active');
+      });
+
+    };', yang akan menghapus semua element. ini kode yang paling atas untuk element '
+    const [elements, setElements] = useState([]);', saya memiliki masalah ketika  delete 1 element dan tekan tombol restart akan tampil pesan ini 'The above error occurred in the <div> component:
+
+        at div
+        at div
+        at div
+        at section
+        at div
+        at BobotronGenerator (' dan 'Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+        at removeChild (', bagaimana cara mengatasinya.
+    
+
+
+    </p>
+
+    <p>
+
+        kenapa masih tampil pesan seperti ini? 'chunk-M324AGAM.js?v=3b0fa204:16668 Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.', 'hook.js:591 The above error occurred in the <div> component:', 'chunk-M324AGAM.js?v=3b0fa204:9127 Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.'. ini kode lengkap saya '
+            // canvas container
+            const canvasContainerRef = useRef(null); 
+            const [elements, setElements] = useState([]);
+        
+            useEffect(() => {
+        
+              function makeDraggable(draggableOverlay) {
+
+                // delete function
+                const deleteBtn = draggableOverlay.querySelector('.deleteBtn');
+          
+                
+                const handleDelete = () => {
+                  // Logika untuk menghapus elemen
+                  draggableOverlay.remove();
+                  
+                  const dataImage = draggableOverlay.getAttribute('data-image');
+                  const remainingElements = document.querySelectorAll(`#canvasContainer [data-image="${dataImage}"]`);
+                  
+                  if (remainingElements.length === 0) {
+                    const addImageElement = document.querySelector(`.addImage[data-image="${dataImage}"]`);
+                    if (addImageElement) {
+                      addImageElement.classList.remove('active');
+                    }
+                  }
+                  
+                  // Hapus elemen dari state
+                  setElements((prevElements) => prevElements.filter((el) => el.id !== elements.id));
+                };
+                
+                deleteBtn.addEventListener('click', handleDelete);
+        
+                // Cleanup event listener saat komponen di-unmount
+                  return () => {
+                    deleteBtn.removeEventListener('click', handleDelete);
+                  };
+          
+          
+              }; // end make draggable
+        
+              elements.forEach((element, index) => {
+                const newElement = document.getElementById(`draggableOverlay-${element.id}`);
+                if (newElement) {
+                  makeDraggable(newElement); 
+                }
+              });
+        
+            }, [elements])
+        
+            // addImage  
+            // restart button
+            const handleRestart = () => {
+              setElements([]); // Hapus semua elemen dari state
+              
+              const addImageElements = document.querySelectorAll('.addImage');
+              
+              addImageElements.forEach((element) => {
+                element.classList.remove('active');
+              });
+            };', apa yang salah?.
+
+    </p>
+
+    <p>
+
+      pada kode react saya ' // delete function
+      const deleteBtn = draggableOverlay.querySelector('.deleteBtn'); 
+      
+      const handleDelete = () => {
+        // Hapus elemen dari state
+        const dataImage = draggableOverlay.getAttribute('data-image');
+        setElements((prevElements) => prevElements.filter((el) => el.id !== dataImage));
+
+        // Hapus elemen dari DOM
+        draggableOverlay.remove();
+
+        // Cek jika masih ada elemen lain
+        const remainingElements = document.querySelectorAll(`#canvasContainer [data-image="${dataImage}"]`);
+        if (remainingElements.length === 0) {
+          const addImageElement = document.querySelector(`.addImage[data-image="${dataImage}"]`);
+          if (addImageElement) {
+            addImageElement.classList.remove('active');
+          }
+        }
+        
+      };
+
+      if (deleteBtn) {
+        deleteBtn.addEventListener('click', handleDelete);
+      }
+
+      // Cleanup
+      return () => {
+        if (deleteBtn) {
+          deleteBtn.removeEventListener('click', handleDelete);
+        }
+      };', ' // restart button
+      const handleRestart = () => {
+        setElements([]); // Hapus semua elemen dari state
+        
+        const addImageElements = document.querySelectorAll('.addImage');
+        
+        addImageElements.forEach((element) => {
+          element.classList.remove('active');
+        });
+        
+      };', ' <div class="container">
+        <div className="settingImage absolute w-full h-full left-0 top-0">
+          {/* Left section */}
+          <div className="left">
+            <div className="indexTop cursor-pointer w-[70%] relative">
+              <img src={indexTop} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="indexBottom cursor-pointer w-[70%] relative">
+              <img src={indexBottom} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="mirrorMode cursor-pointer w-[70%] relative">
+              <img src={mirrorMode} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="mirrorTopMode cursor-pointer w-[70%] relative">
+              <img src={mirrorMode} alt="" className="w-full h-auto object-contain rotate-[90deg]" />
+            </div>
+            <div className="deleteBtn cursor-pointer w-[70%] relative">
+              <img src={deleteIcon} alt="" className="w-full h-auto object-contain" />
+            </div>
+          </div>
+          {/* Right section */}
+          <div className="right-[0%] absolute h-full w-[25%]">
+            <div className="rotate rotateResizeElement rounded-lg  top-0">
+              <img src={rotateIcon} alt="" className="w-[70%] h-auto object-contain" />
+            </div>
+            <div className="resize rotateResizeElement rounded-lg  bottom-0">
+              <img src={resizeIcon} alt="" className="w-[70%] h-auto object-contain mirror_image" />
+            </div>
+          </div>
+        </div>
+      </div> 
+       <button id="restartButton" className="" onClick={handleRestart}>
+        <img
+          src={startOver}
+          alt=""
+          className="w-[50%] h-auto object-contain"
+        />
+      </button>'.  ada tombol untuk menambahkan element yang akan masuk kesini '  {elements.map((element, index) => (
+        <div
+          key={index}
+          id={`draggableOverlay-${element.id}`} // Assign unique ID
+          className={`draggableOverlay ${element.dataClass}`}
+          data-image={element.dataImage}
+          style={{
+            position: 'absolute',
+            left: `${element.position.x}px`,
+            top: `${element.position.y}px`,
+          }}
+        >
+
+        <img src={element.imgSrc} alt="" className={`main_image ${element.dataClass}`} />
+        <div className="settingImage absolute w-full h-full left-0 top-0">
+          {/* Left section */}
+          <div className="left">
+            <div className="indexTop cursor-pointer w-[70%] relative">
+              <img src={indexTop} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="indexBottom cursor-pointer w-[70%] relative">
+              <img src={indexBottom} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="mirrorMode cursor-pointer w-[70%] relative">
+              <img src={mirrorMode} alt="" className="w-full h-auto object-contain" />
+            </div>
+            <div className="mirrorTopMode cursor-pointer w-[70%] relative">
+              <img src={mirrorMode} alt="" className="w-full h-auto object-contain rotate-[90deg]" />
+            </div>
+            <div className="deleteBtn cursor-pointer w-[70%] relative">
+              <img src={deleteIcon} alt="" className="w-full h-auto object-contain" />
+            </div>
+          </div>
+          {/* Right section */}
+          <div className="right-[0%] absolute h-full w-[25%]">
+            <div className="rotate rotateResizeElement rounded-lg  top-0">
+              <img src={rotateIcon} alt="" className="w-[70%] h-auto object-contain" />
+            </div>
+            <div className="resize rotateResizeElement rounded-lg  bottom-0">
+              <img src={resizeIcon} alt="" className="w-[70%] h-auto object-contain mirror_image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}', ada masalah kenapa setiap kali saya hapus 1 element dan menekan tombol restart akan tampil pesan seperti ini 'chunk-M324AGAM.js?v=3b0fa204:9127 Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.', dan ini 'hook.js:608 The above error occurred in the <div> component:'. apakah ada cara untuk mengatasi hal tersebut.
+
+    </p>
+
+    <p>
+      <div className="w-full h-auto flex_center mt-6 aboutContent">
+            
+        {/* <!-- about content --> */}
+        <div className="light_container large w-[80%] lg:w-[60%] h-auto min-h-[250px] p-2">
+          <div className="inner_content_light large w-full h-full min-h-[250px]  lg:min-h-[500px]">
+            <div
+              data-content=""
+              className="content relative w-full h-full z-10 text-white opacity-80 py-4"
+            >
+              <h2 className="text-[5.5vw] lg:text-[3.5vw] text-center audiowide_font ">
+                ABOUT
+              </h2>
+
+              <div className="w-full h-full px-[2vw] text-[12px] lg:text-[1.2vw] tracking-wide max-lg:mt-5 max-h-[500px] lg:max-h-[30vw] overflow-auto textAbout text-center">
+                <p className="typeAnimation "></p>
+
+                <p className="text_container"></p>
+              </div>
+            </div>
+
+            <div className="light flex_center">
+              <div className="light1 light_animation"></div>
+              <div
+                className="light2 light_animation"
+                // style="animation-delay: -1.5s;"
+              ></div>
+            </div>
+          </div>
+        </div>
+ 
+        <LeftTorchComponent/>
+
+        <div className="torch2 absolute right-[-13%] lg:right-[-5%] w-[25%] lg:w-[15%] h-full flex_center rightTorch">
+          <div className="w-full mirror relative z-10">
+            <img
+              src={torch}
+              alt="torch"
+              className="w-full h-auto float_animation"
+              // style="animation-delay: -4s;"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="fires_container absolute right-[-30%] rotate-[90deg]">
+            <div className="fire_container ">
+              <div className="red flame"></div>
+              <div className="orange flame"></div>
+              <div className="yellow flame"></div>
+              <div className="white flame"></div>
+              <div className="blue circle"></div>
+              <div className="black circle"></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </p>
+    
+</body>
+</html>
